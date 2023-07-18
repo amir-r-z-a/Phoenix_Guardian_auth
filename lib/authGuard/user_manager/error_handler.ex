@@ -1,4 +1,4 @@
-defmodule AuthMe.UserManager.ErrorHandler do
+defmodule AuthGuard.UserManager.ErrorHandler do
   import Plug.Conn
 
   @behaviour Guardian.Plug.ErrorHandler
