@@ -1,7 +1,7 @@
 defmodule AuthGuard.UserManager.Pipeline do
   use Guardian.Plug.Pipeline, otp_app: :authGuard,
     module: AuthGuard.UserManager.Guardian,
-    error_handler: AuthMe.UserManager.ErrorHandler
+    error_handler: AuthGuardWeb.UserManager.ErrorHandler
 
   # If there is a session token, restrict it to an access token and validate it
   plug Guardian.Plug.VerifySession, claims: %{"typ" => "access"}
