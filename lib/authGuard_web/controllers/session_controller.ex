@@ -1,7 +1,7 @@
 defmodule AuthGuardWeb.SessionController do
-  use AuthMeWeb, :controller
+  use AuthGuardWeb, :controller
 
-  alias AuthMe.{UserManager, UserManager.User, UserManager.Guardian}
+  alias AuthGuardWeb.{UserManager, UserManager.User, UserManager.Guardian}
 
   def new(conn, _) do
     changeset = UserManager.change_user(%User{})
